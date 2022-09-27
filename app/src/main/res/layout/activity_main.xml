@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hot"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_getCategoryID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GET CATEGORY ID"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_getProductsByID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_getProductsByID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PRODUCTS by ID"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_getProductsByName"
+        app:layout_constraintStart_toEndOf="@id/btn_getCategoryID"
+        app:layout_constraintTop_toTopOf="@+id/btn_getCategoryID" />
+
+    <Button
+        android:id="@+id/btn_getProductsByName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PRODUCTS BY NAME"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_getProductsByID"
+        app:layout_constraintTop_toTopOf="@+id/btn_getProductsByID" />
+
+    <EditText
+        android:id="@+id/et_dataInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Category Name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_getCategoryID" />
+
+    <ListView
+        android:id="@+id/lv_categoryReports"
+        android:layout_width="409dp"
+        android:layout_height="628dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_dataInput" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
